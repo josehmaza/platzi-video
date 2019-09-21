@@ -1,0 +1,25 @@
+{
+  "name": "platzi-video",
+  "version": "1.0.0",
+  "description": "Una aplicacion para seguir el curso de Frontend en Platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josehmaza/platzi-video.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josehmaza/platzi-video/issues"
+  },
+  "homepage": "https://github.com/josehmaza/platzi-video#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@storybook/html": "^5.2.1",
+    "babel-loader": "^8.0.6"
+  }
+}
