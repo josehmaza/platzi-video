@@ -56,7 +56,12 @@ body {
     color: white
 }
 .main {
-   height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 0px 0px 40px 40px;
 }
 .main__title {
     color: white;
@@ -150,17 +155,17 @@ body {
 }
 
 .input {
-    background-color: transparent;
-    border-left: 0px;
-    border-top: 0px;
-    border-right: 0px;
-    border-bottom: 2px solid white;
+    background-color: rgba(255,255,255,0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
     font-family: 'Muli', sans-serif;
     font-size: 16px;
-    margin-bottom: 20px;
-    padding: 0px 20px;
-    outline: none;
     height: 50px;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 0px 20px;
+    width: 70%;
 }
 
 ::placeholder{
@@ -183,6 +188,7 @@ body {
 .footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100px;
     width: 100%;
     background: #AB88FF;
@@ -199,6 +205,78 @@ body {
     text-decoration: underline;
 }
 
+.categories__title {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    /*padding-left: 30px;*/
+    width: 100%;
+}
+.carousel {
+    width: 100%;
+    overflow: scroll;
+  
+    position: relative;
+}
+
+.carousel__container {
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+}
+
+.carousel-item {
+    background-color: palevioletred;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item {
+    transform: translate3d(100px, 0, 0);
+}
+
+
+.carousel-item__details:hover {
+    opacity: 1;
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+.carousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;    
+}
+
+.carousel-item__details {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+::scrollbar{
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     .login__container {
         background-color: transparent;
@@ -210,4 +288,25 @@ body {
         align-items: flex-start;
         flex-direction: column;
     }
+}
+
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+  }
+  .pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+  }
+
+.main__404 {
+    text-align: center;
+    font-size: 5em;
+    color: white;
 }
